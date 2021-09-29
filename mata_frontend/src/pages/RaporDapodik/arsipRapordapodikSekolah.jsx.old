@@ -1,0 +1,217 @@
+// <Row noGap>
+                //     <Col width="100" tabletWidth="100">
+                //         <BlockTitle style={{marginTop:'8px'}}>Sekolah di {this.state.nama_wilayah}</BlockTitle>
+                //         <Block strong style={{marginBottom:'0px', padding:'4px'}}>
+                //             <div className="data-table-footer" style={{display:'block'}}>
+                //                 <div className="data-table-pagination">
+                //                     <a onClick={this.klikPrev} href="#" className={"link "+(this.state.routeParams.start < 1 ? "disabled" : "" )}>
+                //                         <i class="icon icon-prev color-gray"></i>
+                //                     </a>
+                //                     <a onClick={this.klikNext} href="#" className={"link "+((parseInt(this.state.routeParams.start)+20) > parseInt(this.props.rapor_dapodik_sekolah.total) ? "disabled" : "" )}>
+                //                         <i className="icon icon-next color-gray"></i>
+                //                     </a>
+                //                     <span className="data-table-pagination-label">{(this.state.routeParams.start+1)}-{(this.state.routeParams.start)+parseInt(this.state.routeParams.limit)} dari {this.formatAngka(this.props.rapor_dapodik_sekolah.total)} sekolah</span>
+                //                 </div>
+                //             </div>
+                //         </Block>
+                //         <Block strong style={{marginBottom:'0px', marginTop:'0px'}} className="hilangDiMobile">
+                //             <Row>
+                //                     <Col width="100" tabletWidth="30">
+                //                         <b>Nama Sekolah</b>
+                //                     </Col>
+                //                     <Col width="100" tabletWidth="70">
+                //                         <Row>
+                //                             <Col width="30" tabletWidth="30" style={{fontWeight:'bold', textAlign: 'right'}}>
+                //                                 Ringkasan
+                //                             </Col>
+                //                             <Col width="20" tabletWidth="20" style={{fontWeight:'bold', textAlign: 'right'}}>
+                //                                 Akurat
+                //                             </Col>
+                //                             <Col width="20" tabletWidth="20" style={{fontWeight:'bold', textAlign: 'right'}}>
+                //                                 Berkelanjutan
+                //                             </Col>
+                //                             <Col width="20" tabletWidth="20" style={{fontWeight:'bold', textAlign: 'right'}}>
+                //                                 Mutakhir
+                //                             </Col>
+                //                             <Col width="10" tabletWidth="10" style={{fontWeight:'bold', textAlign: 'right'}}>
+                //                             </Col>
+                //                         </Row>
+                //                     </Col>
+                //                     {/* <Col width="100" tabletWidth="70">
+                //                         <Row>
+                //                             <Col width="15" tabletWidth="15" style={{fontWeight:'bold', textAlign: 'right'}}>
+                //                                 Rata-rata
+                //                             </Col>
+                //                             <Col width="15" tabletWidth="15" style={{fontWeight:'bold', textAlign: 'right'}}>
+                //                                 Identitas
+                //                             </Col>
+                //                             <Col width="15" tabletWidth="15" style={{fontWeight:'bold', textAlign: 'right'}}>
+                //                                 PD
+                //                             </Col>
+                //                             <Col width="15" tabletWidth="15" style={{fontWeight:'bold', textAlign: 'right'}}>
+                //                                 PTK
+                //                             </Col>
+                //                             <Col width="15" tabletWidth="15" style={{fontWeight:'bold', textAlign: 'right'}}>
+                //                                 Rombel
+                //                             </Col>
+                //                             <Col width="15" tabletWidth="15" style={{fontWeight:'bold', textAlign: 'right'}}>
+                //                                 Sarpras
+                //                             </Col>
+                //                             <Col width="10" tabletWidth="10" style={{fontWeight:'bold', textAlign: 'right'}}>
+                //                             </Col>
+                //                         </Row>
+                //                     </Col> */}
+                //                 </Row>
+                //         </Block>
+                //         {/* <Block strong style={{marginTop:'0px'}}> */}
+                //             {/* <Pagination
+                //             activePage={1}
+                //             // activePage={this.state.activePage}
+                //             itemsCountPerPage={10}
+                //             totalItemsCount={450}
+                //             pageRangeDisplayed={5}
+                //             onChange={this.handlePageClick}
+                //             /> */}
+                //         {/* </Block> */}
+                //         <Block strong style={{marginTop:'0px'}}>
+                //         {this.props.rapor_dapodik_sekolah.rows.map((option)=>{
+
+                //             let warnaAngka = '#039BE5';
+
+                //             if (parseFloat(option.rapor_final) < 90) {
+                //                 if(parseFloat(option.rapor_final) < 70){
+                //                     if(parseFloat(option.rapor_final) < 50){
+                //                         warnaAngka = '#bf360c';    
+                //                     }else{
+                //                         warnaAngka = '#fb8c00';    
+                //                     }
+                //                 }else{
+                //                     warnaAngka = '#039BE5';
+                //                 }
+                //             }else{
+                //                 warnaAngka = '#558B2F';
+                //             }
+
+                //             return (
+                //                 <Row key={option.sekolah_id} style={{borderBottom:'1px solid #ccc', marginTop:'2px', border:'1px solid #ccc', padding:'8px', borderRadius: '4px'}}>
+                //                     <Col width="60" tabletWidth="30">
+                //                         <a href={"/RaporDapodikProfil/"+option.sekolah_id+"/"}><b>{option.nama}</b> ({option.npsn})</a><br/>
+                //                         <span style={{fontSize:'10px'}}>{option.kecamatan}, {option.kabupaten}, {option.provinsi}</span>
+                //                         <br/><span style={{fontSize:'8px', color:'#111111', fontStyle:'italic'}}>Per {option.tanggal_rekap_terakhir}</span>
+                //                     </Col>
+                //                     <Col width="20" tabletWidth="30" style={{textAlign:'right'}} className="hilangDiDesktop">
+                //                         <b style={{fontSize:'20px', color:warnaAngka}}>{parseFloat(option.rapor_final).toFixed(2)}</b>
+                //                     </Col>
+                //                     <Col width="20" tabletWidth="10" style={{textAlign: 'right', paddingLeft: '16px'}} className="hilangDiDesktop">
+                //                         {/* <Button style={{marginTop:'-5px'}}>
+                //                             <Icon ios="f7:more"></Icon>
+                //                         </Button> */}
+                //                         <MenuItem style={{marginLeft: 'auto', marginTop: '-5px', marginBottom: '4px'}} iconF7="menu" dropdown className="MenuDetail">
+                //                             <MenuDropdown right style={{zIndex:999999}}>
+                //                                 {/* <MenuDropdownItem href={"/"+(parseInt(option.id_level_wilayah) === 1 ? "RaporDapodikProvinsi" : "RaporDapodikKabupaten")+"/" + option.kode_wilayah.trim()} onClick={()=>this.dataRaporWilayah(option.kode_wilayah.trim())}>
+                //                                     <span>Rapor Wilayah {option.nama}</span>
+                //                                     <Icon className="margin-left" f7="bookmark" />
+                //                                 </MenuDropdownItem>
+                //                                 <MenuDropdownItem href="#">
+                //                                     <span>Rapor Sekolah {option.nama}</span>
+                //                                     <Icon className="margin-left" f7="archievebox" />
+                //                                 </MenuDropdownItem> */}
+                //                             </MenuDropdown>
+                //                         </MenuItem>
+                //                     </Col>
+                //                     <Col width="100" className="hilangDiDesktop" style={{borderBottom: '1px solid #ccc', paddingBottom: '8px'}}>
+                //                     </Col>
+                //                     <Col width="100" tabletWidth="70">
+                //                         <Row>
+                //                             <Col width="15" tabletWidth="15" style={{fontSize:'18px', fontWeight:'bold', textAlign: 'right', color:warnaAngka}} className="hilangDiMobile">
+                //                                 <div className="hilangDiDesktop">Total</div>
+                //                                 {parseFloat(option.rapor_final).toFixed(2)}
+                //                             </Col>
+                //                             <Col width="15" tabletWidth="15" style={{textAlign: 'right'}}>
+                //                                 <div className="hilangDiDesktop">Identitas</div>
+                //                                 {parseFloat(option.rapor_akhir).toFixed(2)}
+                //                             </Col>
+                //                             <Col width="15" tabletWidth="15" style={{textAlign: 'right'}}>
+                //                                 <div className="hilangDiDesktop">PD</div>
+                //                                 {parseInt(localStorage.getItem('sudah_login')) !== 0 && parseInt(JSON.parse(localStorage.getItem('user')).verified) === 1 &&
+                //                                 <a className="link" href={"/RaporDapodikPD/"+option.sekolah_id}>{parseFloat(option.rapor_pd).toFixed(2)}</a>
+                //                                 }
+                //                                 {/* {parseFloat(option.rapor_pd).toFixed(2)} */}
+                //                                 {parseInt(localStorage.getItem('sudah_login')) === 0 &&
+                //                                 <>
+                //                                 {parseFloat(option.rapor_pd).toFixed(2)}
+                //                                 </>
+                //                                 }
+                //                                 {parseInt(localStorage.getItem('sudah_login')) === 1 && parseInt(JSON.parse(localStorage.getItem('user')).verified) !== 1 &&
+                //                                 <>
+                //                                 {parseFloat(option.rapor_pd).toFixed(2)}
+                //                                 </>
+                //                                 }
+                //                             </Col>
+                //                             <Col width="15" tabletWidth="15" style={{textAlign: 'right'}}>
+                //                                 <div className="hilangDiDesktop">PTK</div>
+                //                                 {parseInt(localStorage.getItem('sudah_login')) !== 0 && parseInt(JSON.parse(localStorage.getItem('user')).verified) === 1 &&
+                //                                 <a className="link" href={"/RaporDapodikPTK/"+option.sekolah_id}>{parseFloat(option.rapor_ptk).toFixed(2)}</a>
+                //                                 }
+                //                                 {parseInt(localStorage.getItem('sudah_login')) === 0 && 
+                //                                 <>
+                //                                 {parseFloat(option.rapor_ptk).toFixed(2)}
+                //                                 </>
+                //                                 }
+                //                                 {parseInt(localStorage.getItem('sudah_login')) === 1 && parseInt(JSON.parse(localStorage.getItem('user')).verified) !== 1 &&
+                //                                 <>
+                //                                 {parseFloat(option.rapor_ptk).toFixed(2)}
+                //                                 </>
+                //                                 }
+                //                             </Col>
+                //                             <Col width="15" tabletWidth="15" style={{textAlign: 'right'}}>
+                //                                 <div className="hilangDiDesktop">Rombel</div>
+                //                                 {parseFloat(option.rapor_rombel).toFixed(2)}
+                //                             </Col>
+                //                             <Col width="15" tabletWidth="15" style={{textAlign: 'right'}}>
+                //                                 <div className="hilangDiDesktop">Sarpras</div>
+                //                                 {parseFloat(option.rapor_sarpras).toFixed(2)}
+                //                             </Col>
+                //                             <Col width="10" tabletWidth="10" style={{textAlign: 'right', paddingLeft:'16px',}} className="hilangDiMobile">
+                //                                 {/* <Button style={{marginTop:'-5px'}}>
+                //                                     <Icon ios="f7:more"></Icon>
+                //                                 </Button> */}
+                //                                 <MenuItem style={{marginLeft: 'auto', marginTop: '-5px', marginBottom: '0px'}} iconF7="menu" dropdown className="MenuDetail">
+                //                                     <MenuDropdown right style={{zIndex:999999}}>
+                //                                         {/* <MenuDropdownItem href={"/"+(parseInt(option.id_level_wilayah) === 1 ? "RaporDapodikProvinsi" : "RaporDapodikKabupaten")+"/" + option.kode_wilayah.trim()} onClick={()=>this.dataRaporWilayah(option.kode_wilayah.trim())}>
+                //                                             <span>Rapor Wilayah {option.nama}</span>
+                //                                             <Icon className="margin-left" f7="bookmark" />
+                //                                         </MenuDropdownItem>
+                //                                         <MenuDropdownItem href="#">
+                //                                             <span>Rapor Sekolah {option.nama}</span>
+                //                                             <Icon className="margin-left" f7="archievebox" />
+                //                                         </MenuDropdownItem> */}
+                //                                     </MenuDropdown>
+                //                                 </MenuItem>
+                //                             </Col>
+                //                         </Row>
+                //                     </Col>
+                //                 </Row>
+                                
+                //                 // <ListItem
+                //                 //     title={option.nama}
+                //                 //     after={parseFloat(option.rapor_final).toFixed(2)}
+                //                 //     // subtitle={"Sekolah: " + parseFloat(option.rapor_akhir).toFixed(2) + "% | Peserta Didik: " + parseFloat(option.rapor_pd).toFixed(2) + "% | PTK: " + parseFloat(option.rapor_ptk).toFixed(2) + "% | Rombel: " + parseFloat(option.rapor_rombel).toFixed(2) + "% | Sarpras: " + parseFloat(option.rapor_sarpras).toFixed(2) + "%"}
+                //                 // >
+                //                 //     {/* <span style={{fontSize:'15px'}}>{option.nama}</span>
+                //                 //     <span style={{fontSize:'15px'}}>{parseFloat(option.rapor_final).toFixed(2)}%</span>
+                //                 //     <span style={{fontSize:'15px'}}>{parseFloat(option.rapor_pd).toFixed(2)}%</span> */}
+                //                 // </ListItem>    
+                //             )
+                //         })}
+                //         </Block>
+                //         {/* <Pagination
+                //         activePage={1}
+                //         // activePage={this.state.activePage}
+                //         itemsCountPerPage={10}
+                //         totalItemsCount={450}
+                //         pageRangeDisplayed={5}
+                //         // onChange={::this.handlePageChange}
+                //         /> */}
+                //     </Col>
+                // </Row>

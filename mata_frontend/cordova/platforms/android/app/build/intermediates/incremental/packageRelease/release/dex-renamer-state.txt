@@ -1,0 +1,4 @@
+#Mon Dec 07 15:22:13 WIB 2020
+base.0=/Users/khalid/Projects/simdik/cordova/platforms/android/app/build/intermediates/transforms/dex/release/0
+path.0=classes.dex
+renamed.0=classes.dex

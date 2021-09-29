@@ -1,0 +1,310 @@
+body {
+  /* font-family: 'Lato', sans-serif; */
+  /* font-family: 'Raleway', sans-serif; */
+  font-family: 'QuickSand', 'Open Sans', sans-serif, Helvetica, Arial;
+  /* font-family: 'Poppins', sans-serif; */
+}
+
+/* iOS Cordova Tweak */
+.device-cordova.device-ios {
+  height: 100vh;
+}
+
+/* Left Panel right border when it is visible by breakpoint */
+.panel-left.panel-visible-by-breakpoint:before {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background: rgba(0,0,0,0.1);
+  content: '';
+  z-index: 6000;
+}
+
+/* Hide navbar link which opens left panel when it is visible by breakpoint */
+.panel-left.panel-visible-by-breakpoint ~ .view .navbar .panel-open[data-panel="left"] {
+  display: none;
+}
+
+/*
+  Extra borders for main view and left panel for iOS theme when it behaves as panel (before breakpoint size)
+*/
+.ios .panel-left:not(.panel-visible-by-breakpoint).panel-active ~ .view-main:before,
+.ios .panel-left:not(.panel-visible-by-breakpoint).panel-closing ~ .view-main:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background: rgba(0,0,0,0.1);
+  content: '';
+  z-index: 6000;
+}
+
+.mobileTab {
+  display: none;
+}
+
+.sideMenuToggle{
+  display: none !important;
+}
+
+.cardPopuler{
+  margin-left:3px;
+  margin-right:3px;
+  float:none;
+  height:170px;
+  width:140px;
+  background:#c0c0c0;
+  border-radius:3px; 
+  display:inline-block;
+}
+.hilangDiDesktop {
+  display:none;
+}
+
+.hilangDiMobile {
+  display: block;
+}
+
+@media only screen and (max-width: 960px) {
+  .mobileTab {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hilangDiDesktop{
+    display: block;
+  }
+
+  .hilangDiMobile{
+    display: none;
+  }
+}
+
+.MenuDetail > .menu-item-content {
+  background: #f5f5f5;
+  color:#434343;
+  border-radius: 6px;
+}
+
+.pagination{
+  display: flex;
+  /* padding-left: 15px; */
+  /* padding-right: 15px; */
+  list-style: none;
+  border:0px solid #ccc;
+  background:white;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-bottom:0px;
+  right:0px;
+  padding-left: 8px;
+}
+
+.pagination li {
+  display: inline-block;
+  border:0px solid #ccc;
+  width: 15px;
+  height: 15px;
+  padding:8px;
+  text-align: center;
+}
+
+.FabSebaranSekolah > a {
+  height: 40px;
+}
+
+.FabSebaranSekolah > a > div {
+  font-size: 12px;
+}
+
+.listSekolah > .item-content > .item-inner > .item-title-row > .item-title {
+  font-size: 12px;
+}
+
+.listSekolah > .item-content > .item-inner > .item-subtitle {
+  font-size: 10px;
+}
+
+.panelMenuUtama {
+  background: #cccccc;
+}
+
+.navbar-inner {
+  /* background:#F6BC31; */
+  /* background:#F6BC31; */
+  background: #424242;
+  /* min-height: 200px; */
+}
+
+.title-large {
+  background: #424242;
+  color:white;
+}
+
+/* .title-large {
+  background:#F6BC31;
+  color:white;
+} */
+
+.title {
+  color:white;
+}
+
+.left .link {
+  color: white;
+}
+
+.th-judul {
+  border:1px solid #ccc;
+  text-align: center;
+}
+
+.arrow1{
+  width: 32px;
+  float:left;
+  padding-top: 8px;
+}
+
+.konten1{
+  width: calc(100% - 32px);
+  padding-top: 8px;
+}
+
+.arrow2{
+  width: 32px;
+  float:left;
+  margin-left: 32px;
+  padding-top: 8px;
+}
+
+.konten2{
+  width: calc(100% - 64px);
+  margin-left: 64px;
+  padding-top: 8px;
+}
+
+.card{
+  border-radius: 20px;
+}
+
+
+.merahAtas {
+  min-height: 250px;
+  background-attachment: fixed;
+  /* background-image: linear-gradient(to top, #f43b47 0%, #a30606 100%); */
+  margin-top: -70px;
+  background: #8A2387;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background: #ED213A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background: #ED213A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #93291E, #F27121);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #93291E, #F27121); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background: #fc4a1a;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #f7b733, #fc4a1a);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  padding:16px;
+  padding-top: 32px; 
+  color:white;
+}
+
+.button {
+  box-shadow: 0px 0px 0px #2243A6;  
+  /* box-shadow: 0px 5px 0px #2243A6;   */
+  /* border-bottom: 3px solid #f57f17; */
+}
+
+.keteranganss .item-inner{
+  display:inline-block;
+}
+
+.keteranganss .item-inner h4{
+  margin-bottom:0px;
+  font-weight: normal;
+  margin-top: 0px;
+}
+
+.keteranganss .item-inner h2{
+  margin-top:0px;
+  font-size:15px;
+  margin-bottom: 0px;
+}
+
+.buttonSimpan{
+  display: inline-flex;
+  width: calc(100% - 16px);
+  margin:auto;
+  margin: 8px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 0px #bc2a01; 
+  /* max-width: 400px; */
+}
+
+.sub_judul_aplikasi {
+  font-size: 14px;
+}
+
+.button {
+  border-radius: 20px;
+}
+
+.loginGoogle {
+  height: 40px;
+  background:white;
+  color:#434343;
+  box-shadow: 0px 5px 0px #cccccc;
+  border:1px solid #ccc;
+  display:inline-flex;
+  width:100%; 
+}
+
+.logoGoogle {
+  background:linear-gradient(0deg, #4285f4, #34a853, #fbbc05, #ea4335);;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.publikasiJudul {
+  
+}
+
+.publikasiTanggal {
+  margin-left: 0px;
+  margin-top: -10px;
+  font-size: 10px;
+}
+
+.judul_besar {
+  margin-left: 0px;
+  font-weight: bolder;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.judul_kecil {
+  margin-top: 0px;
+}
+
+.itemSub a {
+  padding-left: 18px;
+}
+
+.legendaPeta {
+  position: fixed;
+  z-index:999;
+  border-radius:0px;
+  top: 50px;
+  right: 0px;
+}
+

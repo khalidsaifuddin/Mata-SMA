@@ -1,0 +1,31 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-googleplus": {
+      "REVERSED_CLIENT_ID": "com.googleusercontent.apps.517608616189-eqesn7k49d7kf64p4v6thavrqrbvlhv4",
+      "PACKAGE_NAME": "io.timkayu.vidi"
+    },
+    "cordova-plugin-keyboard": {
+      "PACKAGE_NAME": "io.timkayu.vidi"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "io.timkayu.vidi"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "io.timkayu.vidi"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.timkayu.vidi"
+    },
+    "cordova-plugin-wkwebview-engine": {
+      "PACKAGE_NAME": "io.timkayu.vidi"
+    }
+  },
+  "dependent_plugins": {}
+}

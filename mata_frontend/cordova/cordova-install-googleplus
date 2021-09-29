@@ -1,0 +1,1 @@
+cordova plugin add cordova-plugin-googleplus --save --variable REVERSED_CLIENT_ID=com.googleusercontent.apps.517608616189-eqesn7k49d7kf64p4v6thavrqrbvlhv4 --variable WEB_APPLICATION_CLIENT_ID=517608616189-eqesn7k49d7kf64p4v6thavrqrbvlhv4.apps.googleusercontent.com
